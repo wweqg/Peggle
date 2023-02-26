@@ -67,7 +67,7 @@ When player does not choose a mode, the default normal game mode will be chosen.
 
 ### Menu
 
-<img src="C:\Users\Tshpet\OneDrive - National University of Singapore\Desktop\CS3217\problem-set-4-wweqg\Diagram\menuView.png" width="500" />
+<img src="Diagram/menuView.png" width="500" />
 
 There are two options in the menu, the player could choose to tap on Design Level to enter level designer or tap Start Game to start the game.
 
@@ -75,7 +75,7 @@ There are two options in the menu, the player could choose to tap on Design Leve
 
 #### Loading
 
-<img src="C:\Users\Tshpet\OneDrive - National University of Singapore\Desktop\CS3217\problem-set-4-wweqg\Diagram\loadDesignerView.png" width="500" />
+<img src="Diagram/loadDesignerView.png" width="500" />
 
 When tapping on design level, this view will show up. The player could choose which level to load into Level Designer to edit, or player could tap on New Level to edit on an empty Level. The player could go back to the menu view by clicking on the red cancel sign on the top.
 
@@ -83,7 +83,7 @@ When tapping on design level, this view will show up. The player could choose wh
 
 #### Level Designer
 
-<img src="C:\Users\Tshpet\OneDrive - National University of Singapore\Desktop\CS3217\problem-set-4-wweqg\Diagram\levelDesignerView.png" width="500" />
+<img src="Diagram/levelDesignerView.png" width="500" />
 
 The level designer consists of 3 main components: Canvas, palette row and footer row.
 
@@ -105,7 +105,7 @@ If the player selects the circles and rectangles on the palette row, the player 
 
 Example:
 
- <img src="C:\Users\Tshpet\OneDrive - National University of Singapore\Desktop\CS3217\problem-set-4-wweqg\Diagram\levelDesignerDemo.png" width="500" />
+ <img src="Diagram/levelDesignerDemo.png" width="500" />
 
 #### Move Peg/Rectangular Block
 
@@ -144,31 +144,31 @@ The player could tap on start button to start the game using the level that he/s
 
 ### Loading
 
-<img src="C:\Users\Tshpet\OneDrive - National University of Singapore\Desktop\CS3217\problem-set-4-wweqg\Diagram\loadStartView.png" width="500" />
+<img src="Diagram/loadStartView.png" width="500" />
 
 When tapping on start game from menu, this view will show up. The player could choose which level to load into Start Game to play. The player could go back to the menu view by clicking on the red cancel sign on the top.
 
 ### Select Game Mode
 
-<img src="C:\Users\Tshpet\OneDrive - National University of Singapore\Desktop\CS3217\problem-set-4-wweqg\Diagram\gameModeView.png" width="500" />
+<img src="Diagram/gameModeView.png" width="500" />
 
 After selecting the level, the player will be asked to select the game mode, if the player taps on Cancel, the default game mode Normal will be chosen.
 
 #### Start Game "Beat the Score!"
 
-<img src="C:\Users\Tshpet\OneDrive - National University of Singapore\Desktop\CS3217\problem-set-4-wweqg\Diagram\scoreModeView.png" width="500" />
+<img src="Diagram/scoreModeView.png" width="500" />
 
 If the player selects Beat the Score mode, there will be additional target point being displayed on the bottom left of the screen.
 
 #### Start Game "Siam Left, Siam Right!"
 
-<img src="C:\Users\Tshpet\OneDrive - National University of Singapore\Desktop\CS3217\problem-set-4-wweqg\Diagram\siamModeView.png" width="500" />
+<img src="Diagram/siamModeView.png" width="500" />
 
 If the player selects Siam Left, Siam Right mode, there will be additional information displayed on the bottom left of the screen.
 
 #### Start Game "Normal"
 
-<img src="C:\Users\Tshpet\OneDrive - National University of Singapore\Desktop\CS3217\problem-set-4-wweqg\Diagram\gameView.png" width="500" />
+<img src="Diagram/gameView.png" width="500" />
 
 If the player selects Cancel, this view will show up.
 
@@ -181,18 +181,17 @@ The player could rotate cannon by dragging on the screen.
 The player could shooting the cannon ball by tapping the screen, and the cannon ball will be shoot from the direction where the cannon is pointing at.
 
 ## Dev Guide
-
 This application is built using SwiftUI, following the MVVM model. The image below shows the overall architecture of my application.
 
-<img src="C:\Users\Tshpet\OneDrive - National University of Singapore\Desktop\CS3217\problem-set-4-wweqg\Diagram\peggleArchi-0.png" width="280" />
+<img src="Diagram/peggleArchi-0.png" width="280" />
 
 The detailed version of the architecture diagram:
 
-<img src="C:\Users\Tshpet\OneDrive - National University of Singapore\Desktop\CS3217\problem-set-4-wweqg\Diagram\PeggleDiagram-0.png" width="1000" />
+<img src="Diagram/PeggleDiagram-0.png" width="1000" />
 
 ### Model
 
-<img src="C:\Users\Tshpet\OneDrive - National University of Singapore\Desktop\CS3217\problem-set-4-wweqg\Diagram\Model-0.png" width="300" />
+<img src="Diagram/Model-0.png" width="300" />
 
 My model consists of `PeggleObject` class, which encapsulates the information of the positions of all the game objects. 
 
@@ -205,8 +204,7 @@ My model consists of `PeggleObject` class, which encapsulates the information of
 `SavedLevels` contains an array of levels that are to be stored to or loaded from the storage file.
 
 ### View
-
-<img src="C:\Users\Tshpet\OneDrive - National University of Singapore\Desktop\CS3217\problem-set-4-wweqg\Diagram\View-0.png" width="900" />
+<img src="Diagram/View-0.png" width="900" />
 There four groups of views `LevelDesignerView`, `startGameView`, `MainView` and `MenuView`.
 
 #### `LevelDesignerView`
@@ -240,16 +238,13 @@ This view is responsible for displaying the main playing state of the game, it c
 `CannonBallCountView` shows the information of the remaining cannons on canvas.
 
 #### `MainView`
-
 This view is the main displaying view of the game, depending on the game state, the main view will switch between the `MenuView` and the `LevelDesignerView`.
 
 #### `MenuView`
-
 This view displays the game menu, the user can select "Start game"(has not been implemented yet) or "Design level" to navigate to the `LevelDesignerView`.
 
 ### ViewModel
-
-<img src="C:\Users\Tshpet\OneDrive - National University of Singapore\Desktop\CS3217\problem-set-4-wweqg\Diagram\ViewModel-0.png" width="700" />
+<img src="Diagram/ViewModel-0.png" width="700" />
 
 `PaletteViewModel` is responsible for keeping track of the currently selected button in the `PaletteView`.
 
@@ -261,7 +256,7 @@ This view displays the game menu, the user can select "Start game"(has not been 
 
 ### GameEngine
 
-<img src="C:\Users\Tshpet\OneDrive - National University of Singapore\Desktop\CS3217\problem-set-4-wweqg\Diagram\GameEngine-0.png" width="700" />
+<img src="Diagram/GameEngine-0.png" width="700" />
 
 #### GameLoop
 
@@ -297,20 +292,19 @@ The `PhysicsWorld` class is responsible for simulating the physics of bodies in 
 
 ### Flow when the user start the game
 
-<img src="C:\Users\Tshpet\OneDrive - National University of Singapore\Desktop\CS3217\problem-set-4-wweqg\Diagram\pressDesignLevelSequenceDiagram-0.png" width="900" />
+<img src="Diagram/pressDesignLevelSequenceDiagram-0.png" width="900" />
 
 ### Flow when the user drags a peg
 
-<img src="C:\Users\Tshpet\OneDrive - National University of Singapore\Desktop\CS3217\problem-set-4-wweqg\Diagram\onDragSequenceDiagram-0.png" width="900" />
+<img src="Diagram/onDragSequenceDiagram-0.png" width="900" />
 
 ### Flow of how PhysicsWorld simulate Physics
 
-<img src="C:\Users\Tshpet\OneDrive - National University of Singapore\Desktop\CS3217\problem-set-4-wweqg\Diagram\PhysicsWorld.png" width="300" />
+<img src="Diagram/PhysicsWorld.png" width="300" />
 
 
 
 ## Tests
-
 ### Unit Test
 
 + `Peg.swift`
@@ -394,7 +388,7 @@ The `PhysicsWorld` class is responsible for simulating the physics of bodies in 
     + When passed with a Level, it should set the current selectedLevel to that level.
   + `createNewLevel()` method
     + When called, it should set the selectedLevel by calling the .init() method of Level.
-
+  
 + `Vector.swift`
   + Testing `magnitude()`:
     - Given: a vector (1, 1)
@@ -424,7 +418,6 @@ The `PhysicsWorld` class is responsible for simulating the physics of bodies in 
     - Given: two vectors (1, 0) and (0, 1)
     - When: angle(with:) is called with the second vector as argument
     - Then: the result should be pi / 2
-
 ### Integration Test
 
 + Test PaletteView
@@ -439,11 +432,11 @@ The `PhysicsWorld` class is responsible for simulating the physics of bodies in 
   + When dragging a peg, that peg should move according to the drag motion.
   + Dragging a peg to the edge of the screen should stop at the edge.
   + Dragging a peg through another peg should not overlap the two pegs.
-  + After saving level X, re-loading it should show the correct level.
-  + When the resize button is selected, the user should be able to resize the peg by dragging it.
-  + When the resize button is selected, if the peg size is being reduced to a limit, the peg should maintain a minimum size.
-  + When the resize button is selected, if the peg size is being enlarged to a limit, the peg should maintain a maximum size.
-  + If the resized peg will hit other pegs or the screen, the player should not be able to continue resizing the peg.
+  +  After saving level X, re-loading it should show the correct level.
+  +  When the resize button is selected, the user should be able to resize the peg by dragging it.
+  +  When the resize button is selected, if the peg size is being reduced to a limit, the peg should maintain a minimum size.
+  +  When the resize button is selected, if the peg size is being enlarged to a limit, the peg should maintain a maximum size.
+  +  If the resized peg will hit other pegs or the screen, the player should not be able to continue resizing the peg.
 + Test FooterView
   + When tap on load, a LoadLevelView should appear.
   + When tap on save, the current level should be saved in the data.json file.
