@@ -1,4 +1,4 @@
-# CS3217 Problem Set 4
+# CS3217
 
 **Name:** Your name
 
